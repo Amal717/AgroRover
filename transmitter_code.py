@@ -35,7 +35,7 @@ hat_mapping = {
 
 def send_joystick_event(context, event):
     socket = context.socket(zmq.PUB)
-    socket.bind("tcp://*:5555")  # Change the address as needed
+    socket.bind("tcp://127.0.0.1:5555")  # Change the address as needed
 
     # Process joystick event
     if event.ev_type == 'Key':
